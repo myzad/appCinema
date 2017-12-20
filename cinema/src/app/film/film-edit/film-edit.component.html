@@ -1,0 +1,31 @@
+<form (submit)="update()">
+
+  <!-- <div class="form-group">
+      <label for="film_image">Image du film</label>
+      <input type="file" name="image_film" [(ngModel)]="filmEdit.image_film" class="form-control-file" id="film_image">
+  </div> -->
+
+  <div class="form-group">
+      <label for="film_title">Titre</label>
+      <input type="text" name="film_name" [(ngModel)]="filmEdit.film_name" class="form-control" id="film_title">
+  </div>
+  <div class="form-group">
+      <label for="film_director">Réalisateur</label>
+      <input type="text" name="director_name" [(ngModel)]="filmEdit.director_name" class="form-control" id="film_director">
+  </div>
+  <div class="form-group">
+      <label for="film_actors">Acteurs (séparé d'une virgule)</label>
+      <input type="text" name="actors_name" [(ngModel)]="filmEdit.actors_name" class="form-control" id="film_actors">
+  </div>
+  <div class="form-group">
+      <label for="film_resume">Résumé</label>
+      <input type="text" name="resume_name" [(ngModel)]="filmEdit.resume_film" class="form-control" id="film_resume">
+  </div>
+  <div class="form-group">
+      <label for="film_annonce">Lien bande annonce</label>
+      <input type="url" name="link_film" [(ngModel)]="filmEdit.link_film" class="form-control" id="film_annonce">
+  </div>
+
+  <input type="submit" class="btn btn-outline-white text-dark" value="Modifier">
+
+</form>

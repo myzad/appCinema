@@ -1,0 +1,40 @@
+<div class="text-center">
+    <h3>Bienvenue !</h3>
+</div>
+  
+<p>Une idée de films pour ce soir ?</p>
+  
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">#</th>
+                        <th scope="col">Titre</th>
+                        <th scope="col">Résumé</th>
+                        <th scope="col">Lien</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                </thead>
+                <tbody class="thead-light">
+                    <tr *ngFor="let film of films">
+                        <td class="col-md-1">#</td>
+                        <!-- <td class="col-md-1"><img src="./cinema/src/app/uploadFiles/{{ film.image_film }}" width="80" height="80"></td> -->
+                        <td class="col-md-2">{{ film.film_name }}</td>
+                        <td class="col-md-3">{{ film.film_name }} de {{ film.director_name }} <br>
+                            Avec : {{ film.actors_name }} <br>
+                            Résumé : {{ film.resume_film | slice:0:50 }}
+                        </td>
+                        <td class="col-md-3"><a href="{{ film.link_film }}">{{ film.link_film }}</a></td>
+                        <td class="col-md-1"><a routerLink="detail/{{film._id}}">Plus de détails</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+    

@@ -1,0 +1,16 @@
+<div class="text-center">
+    <h2>{{ film.film_name }}</h2>
+    <!-- <img src="./cinema/src/app/uploadFiles/{{ film.image_film }}" width="80" height="80"> -->
+</div>
+
+<div *ngIf="film" class="row">
+  <div class="col-md-12">
+    <p>Réalisateur : {{ film.director_name }}</p>
+    <p>Acteurs : {{ film.actors_name }}</p>
+  
+  {{ film.resume_film }} <br>
+  Lien utile : {{ film.link_film }}
+  </div>
+</div><br>
+
+<a routerLink="/">Retour</a>

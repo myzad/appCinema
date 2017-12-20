@@ -1,0 +1,31 @@
+
+<div class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+      <a [routerLink]="['/']" class="navbar-brand">Accueil</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="nav-item">
+                  <a [routerLink]="['/film']">Films</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav ml-auto">
+            <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="nav-item">
+              <a [routerLink]="['/profile']">Profil</a>
+            </li>
+            <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="nav-item">
+                <a [routerLink]="['/login']">Connexion</a>
+            </li>
+            <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="nav-item">
+                <a [routerLink]="['/register']">Inscription</a>
+            </li>
+            <li class="nav-item" *ngIf="authService.loggedIn()">
+                <a (click)="onLogoutClick()" href="#">Deconnexion</a>
+            </li>
+        </ul>
+      </div>
+  </div>
+</div>

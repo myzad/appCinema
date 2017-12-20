@@ -1,0 +1,40 @@
+<div class="jumbotron bg-secondary">
+    <h3>Ajouter un film</h3>
+
+    <form 
+    ref='uploadForm' 
+    id='uploadForm' 
+    action='http://localhost:1337/upload' 
+    method='post' 
+    encType="multipart/form-data" 
+    (submit)="create()">
+
+        <!-- <div class="form-group">
+            <label for="film_image">Image du film</label>
+            <input type="file" name="image_film" [(ngModel)]="newFilm.image_film" class="form-control-file" id="film_image" required>
+        </div> -->
+
+        <div class="form-group">
+            <label for="film_title">Titre</label>
+            <input type="text" name="film_name" [(ngModel)]="newFilm.film_name" class="form-control" id="film_title" requried>
+        </div>
+        <div class="form-group">
+            <label for="film_director">Réalisateur</label>
+            <input type="text" name="director_name" [(ngModel)]="newFilm.director_name" class="form-control" id="film_director" required>
+        </div>
+        <div class="form-group">
+            <label for="film_actors">Acteurs (séparé d'une virgule)</label>
+            <input type="text" name="actors_name" [(ngModel)]="newFilm.actors_name" class="form-control" id="film_actors" required>
+        </div>
+        <div class="form-group">
+            <label for="film_resume">Résumé</label>
+            <textarea name="resume_name" [(ngModel)]="newFilm.resume_film" class="form-control" id="film_resume" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="film_annonce">Lien bande annonce</label>
+            <input type="url" name="link_film" [(ngModel)]="newFilm.link_film" class="form-control" id="film_annonce" required>
+        </div>
+
+        <input type="submit" class="btn btn-outline-white text-secondary" value="Ajouter">
+    </form>
+</div>

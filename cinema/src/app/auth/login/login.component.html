@@ -1,0 +1,16 @@
+<h2 class="page-header">Connexion</h2>
+<form (submit)="onLoginSubmit()">
+
+  <div class="form-group">
+    <label for="user_username">Pseudo</label>
+    <input type="text" class="form-control" [(ngModel)]="username" name="username" id="user_username" required>
+  </div>
+
+  <div class="form-group">
+    <label for="user_password">Mot de passe</label>
+    <input type="password" class="form-control" [(ngModel)]="password" name="password" id="user_username" required>
+  </div>
+  <input type="submit" class="btn btn-outline-white text-dark" value="Se connecter">
+</form>
+
+<app-reseau-social></app-reseau-social>
