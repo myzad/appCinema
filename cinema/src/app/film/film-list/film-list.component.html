@@ -20,7 +20,7 @@
                             <td class="col-md-2">{{ film.film_name }}</td>
                             <td class="col-md-3">{{ film.film_name }} de {{ film.director_name }} <br>
                                 Avec : {{ film.actors_name }} <br>
-                                Résumé : {{ film.resume_film | slice:0:50 }}
+                                Résumé : {{ film.resume_film }}
                             </td>
                             <td class="col-md-3"><a href="{{ film.link_film }}">{{ film.link_film }}</a></td>
                             <td class="col-md-1"><a routerLink="/detail/{{film._id}}">Plus de détails</a></td>
