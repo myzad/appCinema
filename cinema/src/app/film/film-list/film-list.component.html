@@ -9,7 +9,6 @@
                             <th scope="col">Titre</th>
                             <th scope="col">Résumé</th>
                             <th scope="col">Lien</th>
-                            <th scope="col">Details</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
@@ -23,12 +22,11 @@
                                 Résumé : {{ film.resume_film }}
                             </td>
                             <td class="col-md-3"><a href="{{ film.link_film }}">{{ film.link_film }}</a></td>
-                            <td class="col-md-1"><a routerLink="/detail/{{film._id}}">Plus de détails</a></td>
-                            <div class="text-center">
+                            <td class="col-md-1 text-center">
                               <button class="btn btn-danger" (click)="destroy(film)">Supprimer</button><br><br>
                               <button class="btn btn-success" (click)="film.editable = !film.editable">Modifier</button>
                               <app-film-edit [film]="film" (updateFilmEvent)="update($event)" *ngIf="film.editable"></app-film-edit>
-                            </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
