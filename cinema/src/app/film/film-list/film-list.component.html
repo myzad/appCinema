@@ -17,11 +17,11 @@
                             <!-- <td class="col-md-1">{{ film.image_film }}</td> -->
                             <td class="col-md-1">#</td>
                             <td class="col-md-2">{{ film.film_name }}</td>
-                            <td class="col-md-3">{{ film.film_name }} de {{ film.director_name }} <br>
+                            <td class="col-md-4">{{ film.film_name }} de {{ film.director_name }} <br>
                                 Avec : {{ film.actors_name }} <br>
                                 Résumé : {{ film.resume_film }}
                             </td>
-                            <td class="col-md-3"><a href="{{ film.link_film }}">{{ film.link_film }}</a></td>
+                            <td class="col-md-2"><a href="{{ film.link_film }}">{{ film.link_film }}</a></td>
                             <td class="col-md-1 text-center">
                               <button class="btn btn-danger" (click)="destroy(film)">Supprimer</button><br><br>
                               <button class="btn btn-success" (click)="film.editable = !film.editable">Modifier</button>
